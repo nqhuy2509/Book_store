@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
     $cpass = mysqli_real_escape_string($conn, md5($_POST['cpassword']));
-    $user_type = $_POST['user_type'];
+    $user_type = 'user';
 
     $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed!');
 
@@ -66,10 +66,6 @@ if (isset($message)) {
         <input type="email" name="email" placeholder="Nhập email" require class="box">
         <input type="password" name="password" placeholder="Nhập mật khẩu" require class="box">
         <input type="password" name="cpassword" placeholder="Xác thực mật khẩu" require class="box">
-        <select name="user_type" class="box">
-            <option value="user">user</option>
-            <option value="admin">admin</option>
-        </select>
         <input type="submit" value="Đăng kí ngay" name="submit" class="btn">
         <p>Bạn đã có tài khoản ? <a href="login.php">Đăng nhập ngay</a></p>
     </form>
