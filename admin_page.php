@@ -39,45 +39,31 @@ if(!isset($admin_id)){
 
             <div class="box">
 
-                <?php 
-                    $total_pendings = 0;
-                    $select_pending = mysqli_query($conn, "SELECT total_price FROM `orders` WHERE payment_status = 'pending'") or die('query failed!');
-                    if(mysqli_num_rows($select_pending) > 0){
-                        while($fetch_pendings = mysqli_fetch_assoc($select_pending)){
-                            $total_price = $fetch_pendings['total_price'];
-                            $total_pendings += $total_price;
-                        }
-                    }
-                ?>
-
-                <h3><?php echo $total_pendings; ?></h3>
-                <p>Tổng đơn hàng chờ</p>
-            </div>
-
-            <div class="box">
-
-                <?php 
-                    $total_completeds = 0;
-                    $select_completed = mysqli_query($conn, "SELECT total_price FROM `orders` WHERE payment_status = 'completed'") or die('query failed!');
-                    if(mysqli_num_rows($select_completed) > 0){
-                        while($fetch_completeds = mysqli_fetch_assoc($select_completed)){
-                            $total_price = $fetch_completeds['total_price'];
-                            $total_completeds += $total_price;
-                        }
-                    }
-                ?>
-
-                <h3><?php echo $total_completeds; ?></h3>
-                <p>Đơn hàng thành công</p>
-            </div>
-
-            <div class="box">
                 <?php
                     $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
                     $number_of_orders = mysqli_num_rows($select_orders);
                 ?>
                 <h3><?php echo $number_of_orders; ?></h3>
                 <p>Số đơn hàng</p>
+            </div>
+
+            <div class="box">
+
+                <?php
+                    $select_success_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE payment_status = 'Hoàn thành'") or die('query failed');
+                    $number_success_orders = mysqli_num_rows($select_success_orders);
+                ?>
+                <h3><?= $number_success_orders; ?></h3>
+                <p>Đơn hàng thành công</p>
+            </div>
+
+            <div class="box">
+                <?php
+                    $select_pending_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE payment_status = 'Đang chờ'") or die('query failed');
+                    $number_pending_orders = mysqli_num_rows($select_pending_orders);
+                ?>
+                <h3><?= $number_pending_orders; ?></h3>
+                <p>Đơn hàng đang chờ</p>
             </div>
 
             <div class="box">

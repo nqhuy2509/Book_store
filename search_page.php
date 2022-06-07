@@ -57,8 +57,8 @@ if(isset($_POST['add_to_cart'])){
 
     <section class="search-form">
         <form action="" method="post">
-            <input type="text" name="search" placeholder="search products..." class="box">
-            <input type="submit" value="search" class="btn">
+            <input type="text" name="search" placeholder="Tìm sản phẩm bạn muốn ..." class="box">
+            <input type="submit" value="Tìm" class="btn">
         </form>
     </section>
 
@@ -75,6 +75,7 @@ if(isset($_POST['add_to_cart'])){
     <form action="" method="post" class="box">
         <img src="uploaded_img/<?php echo $fetch_product['image']; ?>" alt="" class="image">
         <div class="name"><?php echo $fetch_product['name']; ?></div>
+        <div class="author"><?php echo $fetch_product['author']; ?></div>
         <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
         <input type="number"  class="qty" name="product_quantity" min="1" value="1">
         <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
@@ -85,10 +86,10 @@ if(isset($_POST['add_to_cart'])){
    <?php
             }
          }else{
-            echo '<p class="empty">no result found!</p>';
+            echo '<p class="empty">Không có kết quả :((</p>';
          }
       }else{
-         echo '<p class="empty">search something!</p>';
+         echo '<p class="empty">Đang tìm thứ gì đó ...</p>';
       }
    ?>
    </div>

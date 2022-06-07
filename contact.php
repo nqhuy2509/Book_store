@@ -19,14 +19,8 @@ if(isset($_POST['send_message'])){
     $number = $_POST['number'];
     $msg = mysqli_real_escape_string($conn, $_POST['message']);
 
-    $select_message = mysqli_query($conn, "SELECT * FROM `messages` WHERE name = '$name' AND email='$email'") or die('query failed');
-
-    if(mysqli_num_rows($select_message) > 0){
-        $message[] = 'message sent already!';
-    }else{
-        mysqli_query($conn, "INSERT INTO `messages`(user_id, name, email, number, message) VALUE ('$user_id','$name','$email','$number','$msg')") or die('query failed');
-        $message[] = 'message sent successfully!!!';
-    }
+    mysqli_query($conn, "INSERT INTO `messages`(user_id, name, email, number, message) VALUE ('$user_id','$name','$email','$number','$msg')") or die('query failed');
+    $message[] = 'Tin nhắn gửi thành công';
 
 }
 

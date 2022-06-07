@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --purple:#8e44ad;
+   --primary: green;
    --red:#c0392b;
    --orange:#f39c12;
    --black:#333;
@@ -23,7 +23,7 @@
 }
 
 *::selection{
-   background-color: var(--purple);
+   background-color: var(--primary);
    color:var(--white);
 }
 
@@ -37,7 +37,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--purple);
+   background-color: var(--primary);
 }
 
 html{
@@ -118,7 +118,7 @@ section{
 
 .btn,
 .white-btn{
-    background-color: var(--purple);
+    background-color: var(--primary);
 }
 
 .option-btn{
@@ -158,7 +158,7 @@ section{
 }
 
 .heading p a{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .heading p a:hover{
@@ -218,7 +218,7 @@ section{
 }
 
 .form-container form p a{
-    color: var(--purple);
+    color: var(--primary);
 
 }
 
@@ -271,7 +271,7 @@ section{
 }
 
 .header .header-1 .flex .share a:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .header-1 .flex p{
@@ -280,7 +280,7 @@ section{
 }
 
 .header .header-1 .flex p a{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .header-1 .flex p a:hover{
@@ -290,7 +290,7 @@ section{
 
 .header .header-2 .flex .logo{
     font-size: 2.5rem;
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .header-2 .flex .navbar a{
@@ -300,7 +300,7 @@ section{
 }
 
 .header .header-2 .flex .navbar a:hover{
-    color: var(--purple);
+    color: var(--primary);
     text-decoration: underline;
 }
 
@@ -312,7 +312,7 @@ section{
 }
 
 .header .header-2 .flex .icons > *:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 #menu-btn{
@@ -345,7 +345,7 @@ section{
 }
 
 .header .header-2 .flex .user-box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .header-2 .flex .user-box .delete-btn{
@@ -402,12 +402,20 @@ section{
 
 .products .box-container .box .image{
     height: 30rem;
+    width: 100%;
 }
 
 .products .box-container .box .name{
     padding: 1rem 0;
     font-size: 2rem;
     color: var(--black);
+}
+
+.products .box-container .box .author{
+    margin: .5rem 0;
+    font-size: 1.6rem;
+    color: var(--primary);
+    text-transform: capitalize;
 }
 
 .products .box-container .box .qty{
@@ -822,6 +830,22 @@ section{
     margin: 1rem 0;
 }
 
+.checkout .confirm{
+    margin: 1rem .5rem;
+    font-size: 1.8rem;
+}
+
+.checkout .confirm label:hover{
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.checkout input[type="submit"].disabled{
+    pointer-events: none;
+    opacity: .5;
+    user-select: none;
+}
+
 .placed-orders .box-container{
     max-width: 1200px;
     margin: 0 auto;
@@ -829,6 +853,7 @@ section{
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
+    justify-content: center;
 }
 
 .placed-orders .box-container .box{
@@ -847,7 +872,7 @@ section{
 }
 
 .placed-orders .box-container .box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .placed-orders .disabled{
@@ -905,12 +930,12 @@ section{
 
 .footer .box-container .box p i,
 .footer .box-container .box a i{
-    color: var(--purple);
+    color: var(--primary);
     padding-right: .5rem;
 }
 
 .footer .box-container .box a:hover{
-    color: var(--purple);
+    color: var(--primary);
     text-decoration: underline;
 }
 
@@ -924,7 +949,7 @@ section{
 }
 
 .footer .credit span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 /* media query */

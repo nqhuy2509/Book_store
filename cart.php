@@ -15,7 +15,7 @@ if(isset($_POST['update_cart'])){
 
     mysqli_query($conn, "UPDATE `cart` SET quantity = '$cart_quantity' WHERE id = '$cart_id'") or die('query failed');
 
-    $message[] = 'cart quantity updated!';
+    $message[] = 'Số lượng đơn hàng đã được cập nhật!!';
 }
 
 if(isset($_GET['delete'])){
@@ -70,13 +70,13 @@ if(isset($_GET['delete_all'])){
                 <a href="cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('Bạn chắc chắn xóa sản phẩm này ?')"></a>
                 <img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" alt="">
                 <div class="name"><?php echo $fetch_cart['name']; ?></div>
-                <div class="price"><?php echo $fetch_cart['price']; ?></div>
+                <div class="price"><?php echo $fetch_cart['price']; ?> VNĐ</div>
                 <form action="" method="post">
                     <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
                     <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
                     <input type="submit" value="cập nhật" class="option-btn" name="update_cart">
                 </form>
-                <div class="sub-total">Tổng giá : <span><?php echo $sub_total = ($fetch_cart['quantity'] * $fetch_cart['price']); ?></span></div>
+                <div class="sub-total">Tổng giá : <span><?php echo $sub_total = ($fetch_cart['quantity'] * $fetch_cart['price']); ?> VNĐ</span> </div>
             </div>
 
             <?php
@@ -93,7 +93,7 @@ if(isset($_GET['delete_all'])){
                 <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1) ? '': 'disabled'; ?>" onclick="return confirm('Bạn chắc chắn xóa tất cả sản phẩm trong giỏ ?')">Xóa tất cả</a>
         </div>
         <div class="cart_total">
-            <p>Tổng giá trị giỏ hàng: <span><?php echo $grand_total; ?></span></p>
+            <p>Tổng giá trị giỏ hàng: <span><?php echo $grand_total; ?> VNĐ</span></p>
             <div class="flex">
                 <a href="shop.php" class="option-btn">Tiếp tục mua sắm</a>
                 <a href="checkout.php" class="btn <?php echo ($grand_total > 1) ? '': 'disabled'; ?>">Tiến hành thanh toán</a>

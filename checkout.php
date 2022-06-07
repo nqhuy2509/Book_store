@@ -100,7 +100,7 @@ if (isset($_POST['order_btn'])) {
         }
         ?>
 
-        <div class="grand-total">grand total: <span><?php echo $grand_total ?></span></div>
+        <div class="grand-total">Tổng đơn hàng: <span><?php echo $grand_total ?> VNĐ</span></div>
     </section>
 
     <section class="checkout">
@@ -146,7 +146,11 @@ if (isset($_POST['order_btn'])) {
                 </div>
             </div>
 
-            <input type="submit" value="Đặt hàng ngay" class="btn" name="order_btn">
+            <div class="confirm">
+                <input type="checkbox" id="confirmBtn">
+                <label for="confirmBtn" class="confirm">Tôi đã chắn chắn thông tin ở trên và xác nhận đặt hàng</label>
+            </div>
+            <input type="submit" value="Đặt hàng ngay" class="btn disabled" id="submitBtn" name="order_btn">
         </form>
     </section>
 

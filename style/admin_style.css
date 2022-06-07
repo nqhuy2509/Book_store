@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --purple:#8e44ad;
+   --primary: green;
    --red:#c0392b;
    --orange:#f39c12;
    --black:#333;
@@ -23,7 +23,7 @@
 }
 
 *::selection{
-   background-color: var(--purple);
+   background-color: var(--primary);
    color:var(--white);
 }
 
@@ -37,7 +37,7 @@
 }
 
 *::-webkit-scrollbar-thumb{
-   background-color: var(--purple);
+   background-color: var(--primary);
 }
 
 html{
@@ -122,7 +122,7 @@ section{
 
 .btn,
 .white-btn{
-    background-color: var(--purple);
+    background-color: var(--primary);
 }
 
 .option-btn{
@@ -172,7 +172,7 @@ section{
 }
 
 .header .flex .logo span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .flex .navbar a{
@@ -182,7 +182,7 @@ section{
 }
 
 .header .flex .navbar a:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .flex .icons div{
@@ -193,7 +193,7 @@ section{
 }
 
 .header .flex .icons div:hover{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .flex .account-box{
@@ -222,7 +222,7 @@ section{
 }
 
 .header .flex .account-box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .header .flex .account-box .delete-btn{
@@ -261,7 +261,7 @@ section{
     margin-top: 1.5rem;
     padding: 1.5rem;
     background-color: var(--light-bg);
-    color: var(--purple);
+    color: var(--primary);
     font-size: 2rem;
     border: var(--border);
     border-radius: .5rem;
@@ -318,6 +318,7 @@ section{
 
 .show-products .box-container .box img{
     height: 30rem;
+    width: 100%;
 }
 
 .show-products .box-container .box .name{
@@ -325,6 +326,13 @@ section{
     font-size: 2rem;
     color: var(--black);
 
+}
+
+.show-products .box-container .box .author{
+    font-size: 1.6rem;
+    color: var(--primary);
+    margin: .5rem 0;
+    text-transform: capitalize;
 }
 
 .show-products{
@@ -405,7 +413,7 @@ section{
 }
 
 .orders .box-container .box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .orders .box-container .box form select{
@@ -446,7 +454,7 @@ section{
 }
 
 .users .box-container .box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .users .box-container .box .delete-btn{
@@ -479,7 +487,7 @@ section{
 }
 
 .messages .box-container .box p span{
-    color: var(--purple);
+    color: var(--primary);
 }
 
 .messages .box-container .box .delete-btn{

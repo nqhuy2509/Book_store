@@ -79,7 +79,7 @@ if(isset($_GET['delete'])){
             <?php 
                     }
                 }else{
-                    echo '<p class="empty">No orders placed yet!</p>';
+                    echo '<p class="empty">Chưa có đơn hàng nào!!</p>';
                 }
             ?>
         </div>

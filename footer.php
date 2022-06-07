@@ -1,23 +1,23 @@
 <section class="footer">
     <div class="box-container">
         <div class="box">
-            <h3>Quick links</h3>
-            <a href="home.php">home</a>
-            <a href="about.php">about</a>
-            <a href="shop.php">shop</a>
-            <a href="contact.php">contact</a>
+            <h3>Liên kết nhanh</h3>
+            <a href="home.php">Trang chủ</a>
+            <a href="about.php">Giới thiệu</a>
+            <a href="shop.php">Cửa hàng</a>
+            <a href="contact.php">Liên hệ</a>
         </div>
 
         <div class="box">
-            <h3>Extra links</h3>
-            <a href="login.php">login</a>
-            <a href="register.php">register</a>
-            <a href="cart.php">cart</a>
-            <a href="orders.php">orders</a>
+            <h3>Liên kết nhanh</h3>
+            <a href="login.php">Đăng Nhập</a>
+            <a href="register.php">Đăng kí</a>
+            <a href="cart.php">Giỏ hàng</a>
+            <a href="orders.php">Đơn hàng</a>
         </div>
 
         <div class="box">
-            <h3>Contact links</h3>
+            <h3>Links liên hệ</h3>
             <p><i class="fas fa-phone"></i> +84 09090909</p>
             <p><i class="fas fa-phone"></i> +84 09090909</p>
             <p><i class="fas fa-envelope"></i> nqhuy@gmail.com</p>

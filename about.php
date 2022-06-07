@@ -32,7 +32,7 @@ if(!isset($user_id)){
     ?>
 
     <div class="heading">
-        <h3>about us</h3>
+        <h3>Giới thiệu</h3>
         <p><a href="home.php">home</a> / about</p>
     </div>
     
@@ -42,10 +42,10 @@ if(!isset($user_id)){
                 <img src="./images/about-img.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Why choose us ?</h3>
+                <h3></h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea suscipit labore quam molestias delectus accusantium officia magni nisi! Omnis sunt sequi labore optio, rerum libero ipsum magni consectetur enim nesciunt.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, possimus. Recusandae minima facilis exercitationem odio, neque reiciendis nemo iusto at possimus officia labore rem porro illo iste quidem fugit unde.</p>
-                <a href="about.php" class="btn">Contact us</a>
+                <a href="about.php" class="btn">Liên hệ</a>
             </div>
         </div>
     </section>
@@ -93,44 +93,6 @@ if(!isset($user_id)){
                 <h3>john deo</h3>
             </div>
 
-            <div class="box">
-                <img src="./images/pic-4.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem possimus eveniet, fugit qui et nihil velit atque magni! Corrupti tenetur quas hic aut voluptatibus odit sed eum id sequi.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>john deo</h3>
-            </div>
-
-            <div class="box">
-                <img src="./images/pic-5.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem possimus eveniet, fugit qui et nihil velit atque magni! Corrupti tenetur quas hic aut voluptatibus odit sed eum id sequi.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>john deo</h3>
-            </div>
-
-            <div class="box">
-                <img src="./images/pic-6.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium autem possimus eveniet, fugit qui et nihil velit atque magni! Corrupti tenetur quas hic aut voluptatibus odit sed eum id sequi.</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>john deo</h3>
-            </div>
 
 
         </div>

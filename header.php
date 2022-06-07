@@ -18,7 +18,7 @@ if (isset($message)) {
                 <a href="#" class="fab fa-instagram"></a>
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
-            <p>new <a href="login.php">Đăng nhập</a> | <a href="register.php">Đăng kí</a></p>
+            <p><a href="login.php">Đăng nhập</a> | <a href="register.php">Đăng kí</a></p>
         </div>
     </div>
 
@@ -27,7 +27,7 @@ if (isset($message)) {
             <a href="home.php" class="logo">Bookly.</a>
             <nav class="navbar">
                 <a href="home.php">Trang chủ</a>
-                <a href="about.php">Thông tin</a>
+                <a href="about.php">Giới thiệu</a>
                 <a href="shop.php">Cửa hàng</a>
                 <a href="contact.php">Liên hệ</a>
                 <a href="orders.php">Đơn hàng</a>

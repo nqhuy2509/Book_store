@@ -23,3 +23,9 @@ window.onscroll = () =>{
         document.querySelector('.header .header-2').classList.remove('active')
     }
 }
+
+let checkoutConfirmBtn = document.querySelector('.checkout .confirm input')
+let checkoutBtn = document.querySelector('.checkout #submitBtn')
+checkoutConfirmBtn.onchange = () =>{
+    checkoutBtn.classList.toggle('disabled')
+}

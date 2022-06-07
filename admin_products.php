@@ -11,6 +11,7 @@ if(!isset($admin_id)){
 
 if(isset($_POST['add_product'])){
     $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $author = mysqli_real_escape_string($conn, $_POST['author']);
     $price = $_POST['price'];
     $image = $_FILES['image']['name'];
     $image_size = $_FILES['image']['size'];
@@ -23,7 +24,7 @@ if(isset($_POST['add_product'])){
         $message[] = 'Sản phẩm này đã có trong cơ sở dữ liệu !!!';
     }
     else{
-        $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image) VALUES('$name','$price','$image')") or die('query failed');
+        $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name,author, price, image) VALUES('$name','$author','$price','$image')") or die('query failed');
         if($add_product_query){
             if($image_size > 2000000){
                 $message[] = 'Kích thước hình ảnh quá lớn';
@@ -51,9 +52,10 @@ if(isset($_GET['delete'])){
 if(isset($_POST['update_product'])){
     $update_p_id = $_POST['update_p_id'];
     $update_name = $_POST['update_name'];
+    $update_author = $_POST['update_author'];
     $update_price = $_POST['update_price'];
 
-    mysqli_query($conn, "UPDATE `products` SET name = '$update_name', price = '$update_price'
+    mysqli_query($conn, "UPDATE `products` SET name = '$update_name', author = '$update_author', price = '$update_price'
     WHERE id = '$update_p_id'") or die('query failed');
 
     $update_image = $_FILES['update_image']['name'];
@@ -106,6 +108,7 @@ if(isset($_POST['update_product'])){
         <form action="" method="post" enctype="multipart/form-data">
             <h3>Thêm sản phẩm</h3>
             <input type="text" name="name"  class="box" placeholder="Nhập tên sản phẩm" required>
+            <input type="text" name="author"  class="box" placeholder="Nhập tên tác giả" required>
             <input type="number" min="0" name="price" class="box" placeholder="Nhập giá của sản phẩm" required>
             <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
             <input type="submit" value="Thêm" name="add_product" class="btn">
@@ -127,7 +130,8 @@ if(isset($_POST['update_product'])){
             <div class="box">
                 <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
-                <div class="price"><?php echo $fetch_products['price']; ?>/-</div>
+                <div class="author"><?php echo $fetch_products['author']; ?></div>
+                <div class="price"><?php echo $fetch_products['price']; ?> VNĐ</div>
                 <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">Cập nhật</a>
                 <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('Delete this product ?')">Xóa</a>
             </div>
@@ -156,6 +160,7 @@ if(isset($_POST['update_product'])){
             <input type="hidden" name="update_old_image" value="<?php echo $fetch_update['image']; ?>">
             <img src="uploaded_img/<?php echo $fetch_update['image']; ?>" alt="">
             <input type="text" name="update_name" value="<?php echo $fetch_update['name']; ?>" class="box" required placeholder="Nhập tên sản phẩm">
+            <input type="text" name="update_author" value="<?php echo $fetch_update['author']; ?>" class="box" required placeholder="Nhập tên tác giả">
             <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0" class="box" required placeholder="Nhập giá của sản phẩm">
             <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png" class="box">
             <input type="submit" value="Cập nhật" name="update_product" class="btn">

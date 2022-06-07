@@ -69,7 +69,8 @@ if(isset($_POST['add_to_cart'])){
             
                 <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
-                <div class="price"><?php echo $fetch_products['price']; ?></div>
+                <div class="author"><?php echo $fetch_products['author']; ?></div>
+                <div class="price"><?php echo $fetch_products['price']; ?> VNĐ</div>
                 <input type="number" name="product_quantity" value="1" min="1" class="qty">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
@@ -80,7 +81,7 @@ if(isset($_POST['add_to_cart'])){
                     }
                 }
                 else{
-                    echo '<p class="empty">no products added yet!</p>';
+                    echo '<p class="empty">Chưa có sản phẩm !!</p>';
                 }
             ?>
         </div>
@@ -96,8 +97,8 @@ if(isset($_POST['add_to_cart'])){
                 <img src="./images/about-img.jpg" alt="">
             </div>
             <div class="content">
-                <h3>about us</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea suscipit labore quam molestias delectus accusantium officia magni nisi! Omnis sunt sequi labore optio, rerum libero ipsum magni consectetur enim nesciunt.</p>
+                <h3>Về chúng tôi</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum tenetur voluptates cumque, suscipit, ea, omnis dolores reiciendis totam numquam ducimus quisquam atque dicta facere in! Veritatis voluptate est pariatur similique.</p>
                 <a href="about.php" class="btn">read more</a>
             </div>
         </div>
@@ -106,7 +107,7 @@ if(isset($_POST['add_to_cart'])){
     <section class="home-contact">
         <div class="content">
             <h3>Bạn có thắc mắc gì ?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In exercitationem veritatis, quia quo dolor enim, voluptatem tempore provident quaerat magni amet, error quos temporibus. Illum, necessitatibus. Dolor nobis eveniet fugit!</p>
+            <p>Nếu bạn có bất cứ thắc mắc gì hoặc đánh giá gì với chúng tôi, hãy để lại lời nhắn cho chúng tôi. Chúng tôi sẽ cố gắng làm tốt hơn mỗi ngày !!</p>
             <a href="contact.php" class="white-btn">Liên hệ</a>
         </div>
     </section>
